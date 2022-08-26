@@ -1,17 +1,17 @@
-FROM debian:stretch-slim AS build
+FROM node:slim
 
-RUN apt-get update
-RUN apt-get install -y clang make git
+RUN \
+    apt-get update && \
+    apt-get install --yes git ttfautohint && \
+    apt-get clean autoclean && \
+    apt-get autoremove --yes && \
+    rm -rf /var/lib/{apt,dpkg,cache,log}/
 
-WORKDIR /build
-RUN git clone -b master --depth 1 https://github.com/be5invis/Iosevka
+WORKDIR /tmp
 
-FROM node:stretch
-
-RUN apt-get update
-RUN apt-get install -y ttfautohint
-
-COPY --from=build /build/Iosevka /build
+RUN \
+    git clone -b master --depth 1 https://github.com/be5invis/Iosevka && \
+    mv /tmp/Iosevka/* /builder
 
 WORKDIR /build
 RUN npm install
