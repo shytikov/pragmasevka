@@ -7,11 +7,9 @@ RUN \
     apt-get autoremove --yes && \
     rm -rf /var/lib/{apt,dpkg,cache,log}/
 
-WORKDIR /tmp
+WORKDIR /builder
 
 RUN \
-    git clone -b master --depth 1 https://github.com/be5invis/Iosevka && \
-    mv /tmp/Iosevka/* /builder
-
-WORKDIR /build
-RUN npm install
+    git clone -b master --depth 1 https://github.com/be5invis/Iosevka /tmp/Iosevka && \
+    mv /tmp/Iosevka/* /builder && \
+    npm install
