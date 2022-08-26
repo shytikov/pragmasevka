@@ -1,0 +1,52 @@
+[buildPlans.pragmasevka]
+family = "Pragmasevka"
+spacing = "normal"
+serifs = "sans"
+no-cv-ss = true
+export-glyph-names = true
+
+    [buildPlans.pragmasevka.widths.normal]
+    shape = 500
+    menu  = 5
+    css   = "normal"
+
+    [buildPlans.pragmasevka.metric-override]
+    leading = 1100
+    cap = 738
+    ascender = 737
+    xHeight = 552
+
+    [buildPlans.pragmasevka.ligations]
+    inherits = "javascript"
+
+    [buildPlans.pragmasevka.variants]
+    inherits = "ss08"
+
+        [buildPlans.pragmasevka.variants.design]
+        capital-z = "curly-serifless"
+        z = "curly-serifless"
+        zero = "reverse-slashed-split-oval"
+        lig-ltgteq = "slanted"
+
+    [buildPlans.pragmasevka.weights.regular]
+    shape = 425
+    menu = 400
+    css = 400
+
+    [buildPlans.pragmasevka.weights.bold]
+    shape = 800
+    menu = 700
+    css = 700
+
+    [buildPlans.pragmasevka.slopes.upright]
+    angle = 0
+    shape = "upright"
+    menu = "upright"
+    css = "normal"
+
+    [buildPlans.pragmasevka.slopes.italic]
+    angle = 9.4
+    shape = "italic"
+    menu = "italic"
+    css = "italic"
+
