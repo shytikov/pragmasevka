@@ -1,5 +1,11 @@
 # Pragmasevka Nerd Font
 
+Here is comparison with PragmataPro (black, image taken from [Wikipedia](https://en.wikipedia.org/wiki/PragmataPro)):
+
+![Comparison with PragmataPro](https://github.com/shytikov/pragmasevka/blob/main/sample.png?raw=true)
+
+Yes, it's not a carbon copy. But metrics are pretty close. 
+
 ## The story
 
 Do you love [PragmataPro](https://fsd.it/shop/fonts/pragmatapro/) as I am? Probabbly you do, if you're reading this.
