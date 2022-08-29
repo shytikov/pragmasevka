@@ -1,6 +1,6 @@
 [buildPlans.pragmasevka]
 family = "Pragmasevka"
-spacing = "normal"
+spacing = "term"
 serifs = "sans"
 no-cv-ss = true
 export-glyph-names = true
