@@ -1,4 +1,4 @@
-# Pragmasevka Nerd Font
+# Pragmasevka Font
 
 Here is comparison with PragmataPro (black, image taken from [Wikipedia](https://en.wikipedia.org/wiki/PragmataPro)):
 
