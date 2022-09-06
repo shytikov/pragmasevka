@@ -12,9 +12,6 @@ export-glyph-names = true
 
     [buildPlans.pragmasevka.metric-override]
     leading = 1100
-    cap = 738
-    ascender = 737
-    xHeight = 552
 
     [buildPlans.pragmasevka.ligations]
     inherits = "javascript"
