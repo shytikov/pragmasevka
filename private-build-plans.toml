@@ -23,6 +23,7 @@ export-glyph-names = true
         capital-z = "curly-serifless"
         z = "curly-serifless"
         zero = "reverse-slashed-split-oval"
+        underscore = "above-baseline"
         lig-ltgteq = "slanted"
 
     [buildPlans.pragmasevka.weights.regular]
