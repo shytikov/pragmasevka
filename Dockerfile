@@ -10,6 +10,6 @@ RUN \
 WORKDIR /builder
 
 RUN \
-    git clone -b master --depth 1 https://github.com/be5invis/Iosevka /tmp/Iosevka && \
+    git clone -b main --depth 1 https://github.com/be5invis/Iosevka /tmp/Iosevka && \
     mv /tmp/Iosevka/* /builder && \
     npm install
