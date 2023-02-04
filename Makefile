@@ -5,10 +5,20 @@ help: ## Show this help
 builder: ## Create the `iosevka` builder Docker image
 	docker build --no-cache -t iosevka . -f Dockerfile
 
-font: ## Build ttf font from `Pragmasevka` custom configuration
+font: ## Run all build steps in correct order
+	make ttf
+	make nerd
+
+ttf: ## Build ttf font from `Pragmasevka` custom configuration
 	docker run --rm \
 		-v $(CURDIR)/dist:/builder/dist/pragmasevka \
 		-v $(CURDIR)/private-build-plans.toml:/builder/private-build-plans.toml \
 		iosevka \
 		npm run build -- ttf::pragmasevka;
+
+nerd: ## Embedd additional glyphs to ttf font
+	docker run --rm \
+		-v $(CURDIR)/dist/ttf:/in \
+		-v $(CURDIR)/dist:/out \
+		nerdfonts/patcher --complete --careful;
 
