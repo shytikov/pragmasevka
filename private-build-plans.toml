@@ -12,6 +12,7 @@ export-glyph-names = true
 
     [buildPlans.pragmasevka.metric-override]
     leading = 1100
+    xHeight = 550
 
     [buildPlans.pragmasevka.ligations]
     inherits = "javascript"
@@ -47,4 +48,3 @@ export-glyph-names = true
     shape = "italic"
     menu = "italic"
     css = "italic"
-
