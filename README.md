@@ -27,6 +27,7 @@ Till the day we have `SS08` stylistic set of `Iosevka` that mimics `PragmataPro`
 
 Investigating public images of text written in `PragmataPro` and having quite limited time and resources I was able to spot following differences between The Original and `SS08`:
 
+- xHeight of SS08 seems to be smaller;
 - Line height of SS08 seems to be larger;
 - SS08 Regular looks a tiny bit thiner;
 - SS08 Bold looks noticably thiner;
