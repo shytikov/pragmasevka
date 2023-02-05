@@ -3,7 +3,7 @@ help: ## Show this help
 	@egrep -h '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 builder: ## Create the `iosevka` builder Docker image
-	docker build --no-cache -t iosevka/builder -f Dockerfile
+	docker build --no-cache -t iosevka/builder .
 
 font: ## Run all build steps in correct order
 	make ttf
