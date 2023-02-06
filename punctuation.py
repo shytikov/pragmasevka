@@ -22,7 +22,9 @@ pairs = [
 ]
 
 for [recipient, donor] in pairs:
-    target = fontforge.open(f"{prefix}-{recipient}.ttf")
+    font = f"{prefix}-{recipient}.ttf"
+
+    target = fontforge.open(font)
     # Finding all punctuation
     target.selection.select(*glyphs)
     # and deleting it to make space
@@ -34,5 +36,4 @@ for [recipient, donor] in pairs:
     source.copy()
     target.paste()
 
-    font = f"{prefix}-{recipient}.ttf"
     target.generate(font)
