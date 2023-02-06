@@ -33,6 +33,7 @@ Investigating public images of text written in `PragmataPro` and having quite li
 - SS08 Bold looks noticably thiner;
 - `Zero` glyph in SS08 is not reverse slashed oval octagon (it gives me shivers);
 - `Z` glyph in SS08 lacks slight curves;
+- SS08 punctuation marks are consistent with the rest of the font, while `PragmataPro` has them slightly bolder;
 
 Luckly `Iosevka` allows some very sophisticated tweaking, so I have tried my best to improve on "poor man's Pragmata" by fixing these.
 
@@ -43,7 +44,7 @@ Head to [Releases](https://github.com/shytikov/pragmasevka/releases) and pick th
 You can also build it locally by running:
 
 ```sh
-make builder && make font
+make images && make font
 ```
 
 ## Improving it
