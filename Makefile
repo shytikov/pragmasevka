@@ -23,7 +23,7 @@ ttf: ## Build ttf font from `Pragmasevka` custom configuration
 		-v $(CURDIR)/private-build-plans.toml:/builder/private-build-plans.toml \
 		iosevka/builder \
 		npm run build -- ttf::pragmasevka
-		rm -rf $(CURDIR)/dist/ttf-unhinted
+	rm -rf $(CURDIR)/dist/ttf-unhinted
 
 punctuation: ## In-place update of punctuation
 	docker run --rm \
@@ -36,7 +36,7 @@ punctuation: ## In-place update of punctuation
 nerd: ## Patch with Nerd Fonts glyphs
 	docker run --rm \
 		-v $(CURDIR)/dist/ttf:/in \
-		-v $(CURDIR)/dist:/out \
+		-v $(CURDIR)/dist/nerd:/out \
 		nerdfonts/patcher --complete
 
 clean:
