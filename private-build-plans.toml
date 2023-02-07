@@ -17,7 +17,9 @@ hintParams = ["-a", "qqq"]
     xHeight = 550
 
     [buildPlans.pragmasevka.ligations]
-    inherits = "javascript"
+    inherits = "calt"
+    enables = ["connected-underscore", "connected-number-sign"]
+    disables = ["slash-asterisk"]
 
     [buildPlans.pragmasevka.variants]
     inherits = "ss08"
@@ -28,6 +30,8 @@ hintParams = ["-a", "qqq"]
         zero = "reverse-slashed-split-oval"
         underscore = "high"
         lig-ltgteq = "slanted"
+        lig-equal-chain = "with-notch"
+        lig-hyphen-chain = "with-notch"
 
     [buildPlans.pragmasevka.weights.regular]
     shape = 425
