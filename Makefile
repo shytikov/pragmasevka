@@ -37,7 +37,7 @@ nerd: ## Patch with Nerd Fonts glyphs
 	docker run --rm \
 		-v $(CURDIR)/dist/ttf:/in \
 		-v $(CURDIR)/dist:/out \
-		nerdfonts/patcher --complete --careful
+		nerdfonts/patcher --complete
 
 clean:
 	rm -rf $(CURDIR)/dist/*
