@@ -28,7 +28,7 @@ export-glyph-names = true
         lig-ltgteq = "slanted"
 
     [buildPlans.pragmasevka.weights.regular]
-    shape = 450
+    shape = 425
     menu = 400
     css = 400
 
