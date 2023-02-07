@@ -5,6 +5,8 @@ serifs = "sans"
 no-cv-ss = true
 export-glyph-names = true
 
+hintParams = ["-a", "qqq"]   
+
     [buildPlans.pragmasevka.widths.normal]
     shape = 500
     menu  = 5
