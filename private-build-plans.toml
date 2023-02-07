@@ -47,14 +47,6 @@ export-glyph-names = true
     menu = 900
     css = 900
 
-    [buildPlans.pragmasevka.slopes.upright]
-    angle = 0
-    shape = "upright"
-    menu = "upright"
-    css = "normal"
-
-    [buildPlans.pragmasevka.slopes.italic]
-    angle = 9.4
-    shape = "italic"
-    menu = "italic"
-    css = "italic"
+    [buildPlans.pragmasevka.slopes]
+    upright = "default.upright"
+    italic = "default.italic"
