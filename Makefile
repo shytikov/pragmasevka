@@ -14,7 +14,6 @@ scripter: ## Create the `fontforge` scripter Docker image
 
 font: ## Run all build steps in correct order
 	make ttf
-	make punctuation
 	make nerd
 
 ttf: ## Build ttf font from `Pragmasevka` custom configuration
@@ -23,15 +22,13 @@ ttf: ## Build ttf font from `Pragmasevka` custom configuration
 		-v $(CURDIR)/private-build-plans.toml:/builder/private-build-plans.toml \
 		iosevka/builder \
 		npm run build -- ttf::pragmasevka
-	rm -rf $(CURDIR)/dist/ttf-unhinted
-
-punctuation: ## In-place update of punctuation
 	docker run --rm \
 		-v $(CURDIR):/scripter \
 		fontforge/scripter \
 		python /scripter/punctuation.py ./dist/ttf/pragmasevka
 	rm -rf $(CURDIR)/dist/ttf/*semibold*.ttf
 	rm -rf $(CURDIR)/dist/ttf/*black*.ttf
+	rm -rf $(CURDIR)/dist/ttf-unhinted
 
 nerd: ## Patch with Nerd Fonts glyphs
 	docker run --rm \
@@ -39,6 +36,15 @@ nerd: ## Patch with Nerd Fonts glyphs
 		-v $(CURDIR)/dist/nerd:/out \
 		nerdfonts/patcher --complete --careful
 	mv "./dist/nerd/Pragmasevka Nerd Font Complete.ttf" "./dist/nerd/Pragmasevka Regular Nerd Font Complete.ttf"
+
+pack: ## Pack fonts to ready-to-distribute archives
+	mv "$(CURDIR)/dist/nerd/Pragmasevka Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-regular.ttf"
+	mv "$(CURDIR)/dist/nerd/Pragmasevka Italic Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-italic.ttf"
+	mv "$(CURDIR)/dist/nerd/Pragmasevka Bold Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-bold.ttf"
+	mv "$(CURDIR)/dist/nerd/Pragmasevka Bold Italic Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-bolditalic.ttf"
+
+	zip -jr $(CURDIR)/dist/Pragmasevka.zip $(CURDIR)/dist/ttf/*.ttf
+	zip -jr $(CURDIR)/dist/Pragmasevka_NF.zip $(CURDIR)/dist/nerd/*.ttf
 
 clean:
 	rm -rf $(CURDIR)/dist/*
