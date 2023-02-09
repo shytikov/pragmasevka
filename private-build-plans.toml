@@ -27,6 +27,7 @@ hintParams = ["-a", "qqq"]
         "connected-number-sign",
         "connected-hyphen"
     ]
+    disables = ["slash-asterisk"]
 
     [buildPlans.pragmasevka.variants]
     inherits = "ss08"
