@@ -15,6 +15,7 @@ scripter: ## Create the `fontforge` scripter Docker image
 font: ## Run all build steps in correct order
 	make ttf
 	make nerd
+	make pack
 
 ttf: ## Build ttf font from `Pragmasevka` custom configuration
 	docker run --rm \
