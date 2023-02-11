@@ -27,13 +27,14 @@ Till the day we have `SS08` stylistic set of `Iosevka` that mimics `PragmataPro`
 
 Investigating public images of text written in `PragmataPro` and having quite limited time and resources I was able to spot following differences between The Original and `SS08`:
 
-- xHeight of SS08 seems to be smaller;
-- Line height of SS08 seems to be larger;
-- SS08 Regular looks a tiny bit thiner;
-- SS08 Bold looks noticably thiner;
-- `Zero` glyph in SS08 is not reverse slashed oval octagon (it gives me shivers);
-- `Z` glyph in SS08 lacks slight curves;
-- SS08 punctuation marks are consistent with the rest of the font, while `PragmataPro` has them slightly bolder;
+- `xHeight` of `SS08` seems to be smaller;
+- The line height of `SS08` seems to be larger;
+- `SS08` Regular looks a tiny bit thinner;
+- `SS08` Bold looks noticeably thinner;
+- `Zero` glyph in `SS08` is not reverse slashed oval octagon (it gives me shivers);
+- `Z` glyph in `SS08` lacks slight curves;
+- `SS08` punctuation marks are consistent with the rest of the font, while PragmataPro has them slightly bolder;
+- There are slight differences in programming ligatures used;
 
 Luckly `Iosevka` allows some very sophisticated tweaking, so I have tried my best to improve on "poor man's Pragmata" by fixing these.
 
