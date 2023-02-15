@@ -14,7 +14,7 @@ scripter: ## Create the `fontforge` scripter Docker image
 
 font: ## Run all build steps in correct order
 	make ttf
-	make nerd
+	make --ignore-errors nerd
 	make package
 
 ttf: ## Build ttf font from `Pragmasevka` custom configuration
@@ -37,13 +37,12 @@ nerd: ## Patch with Nerd Fonts glyphs
 		-v $(CURDIR)/dist/nerd:/out \
 		nerdfonts/patcher --complete --careful
 	mv "./dist/nerd/Pragmasevka Nerd Font Complete.ttf" "./dist/nerd/Pragmasevka Regular Nerd Font Complete.ttf"
-
-package: ## Pack fonts to ready-to-distribute archives
 	mv "$(CURDIR)/dist/nerd/Pragmasevka Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-regular.ttf"
 	mv "$(CURDIR)/dist/nerd/Pragmasevka Italic Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-italic.ttf"
 	mv "$(CURDIR)/dist/nerd/Pragmasevka Bold Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-bold.ttf"
 	mv "$(CURDIR)/dist/nerd/Pragmasevka Bold Italic Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-bolditalic.ttf"
 
+package: ## Pack fonts to ready-to-distribute archives
 	zip -jr $(CURDIR)/dist/Pragmasevka.zip $(CURDIR)/dist/ttf/*.ttf
 	zip -jr $(CURDIR)/dist/Pragmasevka_NF.zip $(CURDIR)/dist/nerd/*.ttf
 
