@@ -36,7 +36,6 @@ nerd: ## Patch with Nerd Fonts glyphs
 		-v $(CURDIR)/dist/ttf:/in \
 		-v $(CURDIR)/dist/nerd:/out \
 		nerdfonts/patcher --complete --careful
-	mv "./dist/nerd/Pragmasevka Nerd Font Complete.ttf" "./dist/nerd/Pragmasevka Regular Nerd Font Complete.ttf"
 	mv "$(CURDIR)/dist/nerd/Pragmasevka Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-regular.ttf"
 	mv "$(CURDIR)/dist/nerd/Pragmasevka Italic Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-italic.ttf"
 	mv "$(CURDIR)/dist/nerd/Pragmasevka Bold Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-bold.ttf"
