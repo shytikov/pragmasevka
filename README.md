@@ -1,6 +1,6 @@
 # Pragmasevka Font
 
-Here is comparison with PragmataPro (black, image taken from [Wikipedia](https://en.wikipedia.org/wiki/PragmataPro)):
+Here is comparison with PragmataPro (black, the image taken from [Wikipedia](https://en.wikipedia.org/wiki/PragmataPro)):
 
 ![Comparison with PragmataPro](https://github.com/shytikov/pragmasevka/blob/main/sample.png?raw=true)
 
@@ -19,7 +19,7 @@ There were many attemps to achieve same goals as `PragmataPro` did: condensed wi
 - [Victor Mono](https://rubjo.github.io/victor-mono/);
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono/);
 
-But [Iosevka](https://github.com/be5invis/Iosevka) stands out of the croud the most. The sole intention from very beginning of this font was to immitate `PragmataPro` as closely as possible. And first public versions proves that. But with time the font matured to a framework that able to provide much more than just a copy of very good font.
+But [Iosevka](https://github.com/be5invis/Iosevka) stands out of the crowd the most. The sole intention from very beginning of this font was to immitate `PragmataPro` as closely as possible. And first public versions proves that. But with time the font matured to a framework that able to provide much more than just a copy of very good font.
 
 Till the day we have `SS08` stylistic set of `Iosevka` that mimics `PragmataPro`. But does it the best possible job?  
 
@@ -31,7 +31,7 @@ Investigating public images of text written in `PragmataPro` and having quite li
 - The line height of `SS08` seems to be larger;
 - `SS08` Regular looks a tiny bit thinner;
 - `SS08` Bold looks noticeably thinner;
-- `Zero` glyph in `SS08` is not reverse slashed oval octagon (it gives me shivers);
+- `Zero` glyph in `SS08` is not reverse slashed oval octagon... smoothened hexagon? (it gives me shivers, it's that awesome looking!);
 - `Z` glyph in `SS08` lacks slight curves;
 - `SS08` punctuation marks are consistent with the rest of the font, while PragmataPro has them slightly bolder;
 - There are slight differences in programming ligatures used;
