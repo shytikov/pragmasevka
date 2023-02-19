@@ -32,16 +32,6 @@ hintParams = ["-a", "qqq"]
     [buildPlans.pragmasevka.variants]
     inherits = "ss08"
 
-        [buildPlans.pragmasevka.variants.design]
-        capital-z = "curly-serifless"
-        z = "curly-serifless"
-        zero = "reverse-slashed-split-oval"
-        underscore = "high"
-        lig-ltgteq = "slanted"
-        lig-neq = "slightly-slanted-dotted"
-        lig-equal-chain = "with-notch"
-        lig-hyphen-chain = "with-notch"
-
     [buildPlans.pragmasevka.weights.regular]
     shape = 425
     menu = 400
