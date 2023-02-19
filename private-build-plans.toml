@@ -15,7 +15,6 @@ hintParams = ["-a", "qqq"]
     [buildPlans.pragmasevka.metric-override]
     leading = 1100
     xHeight = 550
-    periodSize = 'default_periodSize * 1.2'
 
     [buildPlans.pragmasevka.ligations]
     inherits="default-calt"
@@ -37,11 +36,21 @@ hintParams = ["-a", "qqq"]
     shape = 425
     menu = 400
     css = 400
+
+    [buildPlans.pragmasevka.weights.semibold]
+    shape = 600
+    menu = 600
+    css = 600
     
     [buildPlans.pragmasevka.weights.bold]
     shape = 800
     menu = 700
     css = 700
+
+    [buildPlans.pragmasevka.weights.black]
+    shape = 900
+    menu = 900
+    css = 900
 
     [buildPlans.pragmasevka.slopes]
     upright = "default.upright"
