@@ -13,9 +13,9 @@ scripter: ## Create the `fontforge` scripter Docker image
 	docker build --no-cache -t fontforge/scripter ./images/fontforge
 
 font: ## Run all build steps in correct order
-	make ttf
+	make --ignore-errors ttf
 	make --ignore-errors nerd
-	make package
+	make --ignore-errors package
 
 ttf: ## Build ttf font from `Pragmasevka` custom configuration
 	docker run --rm \
@@ -27,6 +27,7 @@ ttf: ## Build ttf font from `Pragmasevka` custom configuration
 		-v $(CURDIR):/scripter \
 		fontforge/scripter \
 		python /scripter/punctuation.py ./dist/ttf/pragmasevka
+	chmod -R 777 $(CURDIR)/dist/
 	rm -rf $(CURDIR)/dist/ttf/*semibold*.ttf
 	rm -rf $(CURDIR)/dist/ttf/*black*.ttf
 	rm -rf $(CURDIR)/dist/ttf-unhinted
