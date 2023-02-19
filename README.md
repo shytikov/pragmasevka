@@ -4,7 +4,7 @@ Here is comparison with PragmataPro (black, the image taken from [Wikipedia](htt
 
 ![Comparison with PragmataPro](https://github.com/shytikov/pragmasevka/blob/main/sample.png?raw=true)
 
-Yes, it's not a carbon copy. But metrics are pretty close. 
+Yes, it's not a carbon copy. But metrics are pretty close.
 
 ## The story
 
@@ -31,12 +31,12 @@ Investigating public images of text written in `PragmataPro` and having quite li
 - The line height of `SS08` seems to be larger;
 - `SS08` Regular looks a tiny bit thinner;
 - `SS08` Bold looks noticeably thinner;
-- `Zero` glyph in `SS08` is not reverse slashed oval octagon... smoothened hexagon? (it gives me shivers, it's that awesome looking!);
-- `Z` glyph in `SS08` lacks slight curves;
 - `SS08` punctuation marks are consistent with the rest of the font, while PragmataPro has them slightly bolder;
 - There are slight differences in programming ligatures used;
 
 Luckly `Iosevka` allows some very sophisticated tweaking, so I have tried my best to improve on "poor man's Pragmata" by fixing these.
+
+*N.B.:* I'm also [contributing changes back to Iosevka](https://github.com/be5invis/Iosevka/pull/1550) to improve `SS08`, to keep it as close to the `PragmataPro` as possible without actually breaking consistency with the original font. 
 
 ## I want one
 
@@ -45,7 +45,7 @@ Head to [Releases](https://github.com/shytikov/pragmasevka/releases) and pick th
 You can also build it locally by running:
 
 ```sh
-make images && make font
+make builder && make font
 ```
 
 ## Improving it
