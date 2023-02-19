@@ -15,6 +15,7 @@ hintParams = ["-a", "qqq"]
     [buildPlans.pragmasevka.metric-override]
     leading = 1100
     xHeight = 550
+    periodSize = 'default_periodSize * 1.2'
 
     [buildPlans.pragmasevka.ligations]
     inherits="default-calt"
