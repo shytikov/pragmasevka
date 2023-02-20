@@ -19,18 +19,24 @@ font: ## Run all build steps in correct order
 
 ttf: ## Build ttf font from `Pragmasevka` custom configuration
 	docker run --rm \
-		-v $(CURDIR)/dist:/builder/dist/pragmasevka \
+		-v pragmasevka-volume-ttf:/builder/dist/pragmasevka/ttf \
 		-v $(CURDIR)/private-build-plans.toml:/builder/private-build-plans.toml \
 		iosevka/builder \
 		npm run build -- ttf::pragmasevka
 	docker run --rm \
-		-v $(CURDIR):/scripter \
+		-v pragmasevka-volume-ttf:/scripter \
+		-v $(CURDIR)/punctuation.py:/scripter/punctuation.py \
 		fontforge/scripter \
-		python /scripter/punctuation.py ./dist/ttf/pragmasevka
-	chmod -R 777 $(CURDIR)/dist/
+		python /scripter/punctuation.py ./pragmasevka
+	docker container create \
+		-v pragmasevka-volume-ttf:/in \
+		--name pragmasevka-dummy \
+		alpine
+	docker cp pragmasevka-dummy:/in dist/ttf
+	docker rm pragmasevka-dummy
+	docker volume rm pragmasevka-volume-ttf
 	rm -rf $(CURDIR)/dist/ttf/*semibold*.ttf
 	rm -rf $(CURDIR)/dist/ttf/*black*.ttf
-	rm -rf $(CURDIR)/dist/ttf-unhinted
 
 nerd: ## Patch with Nerd Fonts glyphs
 	docker run --rm \
