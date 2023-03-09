@@ -32,7 +32,6 @@ Investigating public images of text written in `PragmataPro` and having quite li
 - `SS08` Regular looks a tiny bit thinner;
 - `SS08` Bold looks noticeably thinner;
 - `Zero` glyph in `SS08` is not reverse slashed oval octagon... smoothened hexagon? (it gives me shivers, it's that awesome looking!);
-- `Z` glyph in `SS08` lacks slight curves;
 - `SS08` punctuation marks are consistent with the rest of the font, while PragmataPro has them slightly bolder;
 - There are slight differences in programming ligatures used;
 
