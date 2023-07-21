@@ -49,3 +49,8 @@ make images && make font
 ## Improving it
 
 Let's face it – `PragmataPro` is perfect. And we all should buy it. And I will go it too exactly that day I would get bored from playing with `Iosevka`. And meanwhile if you have spotted something that could be improved, please file an [issue](https://github.com/shytikov/pragmasevka/issues).
+
+## Also worth checking
+
+- [NRK-Mono](https://github.com/N-R-K/NRK-Mono) - All benefit of [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) with more condensed option;
+- [Iosvmata](https://github.com/N-R-K/Iosvmata) - More extended version of Pragmasevka;
