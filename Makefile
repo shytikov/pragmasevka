@@ -52,10 +52,10 @@ nerd: ## Patch with Nerd Fonts glyphs
 	docker cp pragmasevka-dummy:/nerd $(CURDIR)/dist
 	docker rm pragmasevka-dummy
 	docker volume rm pragmasevka-volume
-	mv "$(CURDIR)/dist/nerd/Pragmasevka Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-regular.ttf"
-	mv "$(CURDIR)/dist/nerd/Pragmasevka Italic Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-italic.ttf"
-	mv "$(CURDIR)/dist/nerd/Pragmasevka Bold Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-bold.ttf"
-	mv "$(CURDIR)/dist/nerd/Pragmasevka Bold Italic Nerd Font Complete.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-bolditalic.ttf"
+	mv "$(CURDIR)/dist/nerd/PragmasevkaNerdFont-Regular.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-regular.ttf"
+	mv "$(CURDIR)/dist/nerd/PragmasevkaNerdFont-Italic.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-italic.ttf"
+	mv "$(CURDIR)/dist/nerd/PragmasevkaNerdFont-Bold.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-bold.ttf"
+	mv "$(CURDIR)/dist/nerd/PragmasevkaNerdFont-BoldItalic.ttf" "$(CURDIR)/dist/nerd/pragmasevka-nf-bolditalic.ttf"
 
 package: ## Pack fonts to ready-to-distribute archives
 	zip -jr $(CURDIR)/dist/Pragmasevka.zip $(CURDIR)/dist/ttf/*.ttf
