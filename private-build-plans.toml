@@ -2,8 +2,8 @@
 family = "Pragmasevka"
 spacing = "term"
 serifs = "sans"
-no-cv-ss = true
-export-glyph-names = true
+noCvSs = true
+exportGlyphNames = true
 
 hintParams = ["-a", "qqq"]   
 
@@ -53,5 +53,5 @@ hintParams = ["-a", "qqq"]
     css = 900
 
     [buildPlans.pragmasevka.slopes]
-    upright = "default.upright"
-    italic = "default.italic"
+    upright = "default.Upright"
+    italic = "default.Italic"
