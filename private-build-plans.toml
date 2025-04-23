@@ -5,14 +5,14 @@ serifs = "sans"
 noCvSs = true
 exportGlyphNames = true
 
-hintParams = ["-a", "qqq"]   
+hintParams = ["-a", "qqq"]
 
     [buildPlans.pragmasevka.widths.normal]
     shape = 500
     menu  = 5
     css   = "normal"
 
-    [buildPlans.pragmasevka.metric-override]
+    [buildPlans.pragmasevka.metricOverride]
     leading = 1100
     xHeight = 550
 
@@ -23,9 +23,7 @@ hintParams = ["-a", "qqq"]
         "kern-dotty",
         "kern-bars",
         "llggeq",
-        "connected-underscore", 
-        "connected-number-sign",
-        "connected-hyphen"
+         "--fast-chaining--"
     ]
     disables = ["slash-asterisk"]
 

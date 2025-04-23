@@ -19,7 +19,7 @@ font: ## Run all build steps in correct order
 
 ttf: ## Build ttf font from `Pragmasevka` custom configuration
 	docker run --rm \
-		-v pragmasevka-volume:/builder/dist/pragmasevka/ttf \
+		-v pragmasevka-volume:/builder/dist/pragmasevka/TTF \
 		-v $(CURDIR)/private-build-plans.toml:/builder/private-build-plans.toml \
 		iosevka/builder \
 		npm run build -- ttf::pragmasevka
@@ -39,6 +39,10 @@ ttf: ## Build ttf font from `Pragmasevka` custom configuration
 	rm -rf $(CURDIR)/dist/ttf/*semibold*.ttf
 	rm -rf $(CURDIR)/dist/ttf/*black*.ttf
 	rm -rf $(CURDIR)/dist/ttf/punctuation.py
+	mv "$(CURDIR)/dist/ttf/pragmasevka-normalbolditalic.ttf" "$(CURDIR)/dist/ttf/pragmasevka-bolditalic.ttf"
+	mv "$(CURDIR)/dist/ttf/pragmasevka-normalboldupright.ttf" "$(CURDIR)/dist/ttf/pragmasevka-bold.ttf"
+	mv "$(CURDIR)/dist/ttf/pragmasevka-normalregularitalic.ttf" "$(CURDIR)/dist/ttf/pragmasevka-italic.ttf"
+	mv "$(CURDIR)/dist/ttf/pragmasevka-normalregularupright.ttf" "$(CURDIR)/dist/ttf/pragmasevka-regular.ttf"
 
 nerd: ## Patch with Nerd Fonts glyphs
 	docker run --rm \

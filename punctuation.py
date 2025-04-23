@@ -15,14 +15,14 @@ glyphs = [
 ]
 
 pairs = [
-    ['regular', 'semibold'],
-    ['italic', 'semibolditalic'],
-    ['bold', 'black'],
+    ['regularupright', 'semiboldupright'],
+    ['regularitalic', 'semibolditalic'],
+    ['boldupright', 'blackupright'],
     ['bolditalic', 'blackitalic'],
 ]
 
 for [recipient, donor] in pairs:
-    font = f"{prefix}-{recipient}.ttf"
+    font = f"{prefix}-normal{recipient}.ttf"
 
     target = fontforge.open(font)
     # Finding all punctuation
@@ -31,7 +31,7 @@ for [recipient, donor] in pairs:
     for i in target.selection.byGlyphs:
         target.removeGlyph(i)
 
-    source = fontforge.open(f"{prefix}-{donor}.ttf")
+    source = fontforge.open(f"{prefix}-normal{donor}.ttf")
     source.selection.select(*glyphs)
     source.copy()
     target.paste()
